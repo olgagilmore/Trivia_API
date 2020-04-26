@@ -52,47 +52,14 @@ Setting the `FLASK_ENV` variable to `development` will detect file changes and r
 
 Setting the `FLASK_APP` variable to `flaskr` directs flask to use the `flaskr` directory and the `__init__.py` file to find the application. 
 
-## Tasks
-
-One note before you delve into your tasks: for each endpoint you are expected to define the endpoint and response data. The frontend will be a plentiful resource because it is set up to expect certain endpoints and response data formats already. You should feel free to specify endpoints in your own way; if you do so, make sure to update the frontend or you will get some unexpected behavior. 
-
-1. Use Flask-CORS to enable cross-domain requests and set response headers. 
-2. Create an endpoint to handle GET requests for questions, including pagination (every 10 questions). This endpoint should return a list of questions, number of total questions, current category, categories. 
-3. Create an endpoint to handle GET requests for all available categories. 
-4. Create an endpoint to DELETE question using a question ID. 
-5. Create an endpoint to POST a new question, which will require the question and answer text, category, and difficulty score. 
-6. Create a POST endpoint to get questions based on category. 
-7. Create a POST endpoint to get questions based on a search term. It should return any questions for whom the search term is a substring of the question. 
-8. Create a POST endpoint to get questions to play the quiz. This endpoint should take category and previous question parameters and return a random questions within the given category, if provided, and that is not one of the previous questions. 
-9. Create error handlers for all expected errors including 400, 404, 422 and 500. 
-
-REVIEW_COMMENT
-```
-
-
-
-POST ...
-DELETE ...
-
-GET '/categories'
-- Fetches a dictionary of categories in which the keys are the ids and the value is the corresponding string of the category
-- Request Arguments: None
-- Returns: An object with a single key, categories, that contains a object of id: category_string key:value pairs. 
-{'1' : "Science",
-'2' : "Art",
-'3' : "Geography",
-'4' : "History",
-'5' : "Entertainment",
-'6' : "Sports"}
-
 ```
 API Reference for Trivia Backend
 
 GET /categories
-•	General:
+â€¢	General:
 	Returns a list of category objects, success value, and total number of categories
 		
-•	Sample: curl http://127.0.0.1:5000/categories
+â€¢	Sample: curl http://127.0.0.1:5000/categories
 {
   "categories": [
     {
@@ -153,10 +120,10 @@ $ curl http://127.0.0.1:5000/categories/6/questions
 }
 
 GET /questions
-•	General:
+â€¢	General:
 	Returns a list of question objects, success value, and total number of questions
 	Results are paginated in groups of 10. Include a request argument to choose page number, starting from 1.
-•	Sample: curl http://127.0.0.1:5000/questions?page=2
+â€¢	Sample: curl http://127.0.0.1:5000/questions?page=2
   {
   "questions": [
     {
@@ -220,10 +187,10 @@ GET /questions
   "total_questions": 18
 }
 POST /questions
-•	General:
+â€¢	General:
 	Creates a new question using the submitted title, author and rating. Returns the id of the created question, success value, total questions, and question list based on current page number to update the frontend.
-•	curl http://127.0.0.1:5000/questions?page=3 -X POST -H "Content-Type: application/json" -d '{"question":"What is avocado?", "answer":"vegetable", "category":"1", "difficulty":"1"}'
-•	{
+â€¢	curl http://127.0.0.1:5000/questions?page=3 -X POST -H "Content-Type: application/json" -d '{"question":"What is avocado?", "answer":"vegetable", "category":"1", "difficulty":"1"}'
+â€¢	{
   "created": 24,
   "questions": [],
   "success": true,
@@ -266,10 +233,10 @@ curl http://127.0.0.1:5000/questions -X POST -H "Content-Type: application/json"
 
 
 DELETE /questions/{question_id}
-•	General:
+â€¢	General:
 	Deletes the question of the given ID if it exists. Returns the id of the deleted question, success value, total questions, and question list based on current page number to update the frontend.
-•	curl -X DELETE http://127.0.0.1:5000/questions/16?page=2
-•	{
+â€¢	curl -X DELETE http://127.0.0.1:5000/questions/16?page=2
+â€¢	{
   "deleted": 16,
   "questions": [
     {
@@ -372,9 +339,9 @@ The API will return these type of errors:
 - 405 : 'method not allowed'
 - 500 : 'Internal Server Error'
 PATCH /questions/{question_id}
-•	General:
+â€¢	General:
 	If provided, updates the rating of the specified question. Returns the success value and id of the modified question.
-•	curl http://127.0.0.1:5000/questions/15 -X PATCH -H "Content-Type: application/json"
+â€¢	curl http://127.0.0.1:5000/questions/15 -X PATCH -H "Content-Type: application/json"
 
 ## Testing
 To run the tests, run
