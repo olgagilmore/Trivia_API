@@ -2,8 +2,11 @@
 
 ## Full Stack Trivia - my project for Udacity Full Stack Developer nanodegree program
 
-Udacity is invested in creating bonding experiences for its employees and students. A bunch of team members got the idea to hold trivia on a regular basis and created a  webpage to manage the trivia app and play the game, but their API experience is limited and still needs to be built out. 
+Trivia game to create bonding experiences for any players. 
 
+![Trivia First Page](TriviaQuestions.PNG)
+
+This website:
 1) Displays questions - both all questions and by category. Questions should show the question, category and difficulty rating by default and can show/hide the answer. 
 2) Deletes questions.
 3) Adds questions and require that they include question and answer text.
